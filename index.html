@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tasty HUT</title>
+    <!-- favIcon -->
+    <link rel="shortcut icon" href="./images/favIcon.png" type="image/x-icon">
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css">
+</head>
+<body>
+    <!-- header -->
+    <header>
+        <nav class="navbar navbar-expand-md bg-body-tertiary navbar-light fixed-top border-bottom border-3">
+            <div class="container">
+                <a href="" class="navbar-brand fw-bold fs-5">
+                    Tasty HUT
+                </a>
+                <button class="btn btn-warning">
+                    Sing Up
+                </button>
+            </div>
+        </nav>
+    </header>
+    <!-- end -->
+
+    <!-- home section -->
+    <section class="home-banner mt-5" id="home">
+        <div class="container rounded-4 bg-image py-5" style="background-image: url(./images/banner_1.png)">
+            <div class="row">
+                <div class="col-md-6 col-12 d-flex justify-content-center align-items-center flex-column text-center m-auto py-5">
+                    <h1 class="fw-bold display-3 text-light">Taste Our Delicious Best Foods</h1>
+                    <p class="text-light">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humou.</p>
+                    <div class="row w-100">
+                        <label for="search" class="col-12 col-md-9 mb-4 mb-md-0">
+                            <input type="text" id="search" class="form-control px-4 py-2" placeholder="Search your services">
+                        </label>
+                        <input onclick="search()" type="submit" value="Search" class="col-5 col-md-3 mx-auto btn btn-warning bg-tan border-0 px-4 py-2 fw-bold" id="searchBtn">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- end -->
+
+    <!-- food section -->
+    <section class="py-5 my-5">
+        <div class="container">
+            <div class="title text-center mb-5">
+                <h1>
+                    Your Favourite Food
+                </h1>
+            </div>
+            <div id="container-dic"></div>
+            <div class="meal-container row row-cols-md-2" id="meal-container">
+                
+            </div>
+            <div class="text-center mt-5">
+                <button onclick="seeAll()" class="btn btn-warning d-none" id="seeAllBtn" >
+                    See All
+                </button>
+            </div>
+        </div>
+        <div class="d-flex justify-content-center mt-5" id="spinner">
+            <div class="spinner-border" role="status">
+              <span class="visually-hidden">Loading...</span>
+            </div>
+        </div>
+    </section>
+    <!-- end -->
+
+    <!-- Modal -->
+    <div class="modal fade" id="mealDetails" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="mealDetailsLabel"> </h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body" id="detailsBody">
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- footer -->
+    <footer class="py-5 bg-warning bg-opacity-25">
+        <div class="container py-3">
+            <div class="row">
+                <div class="col-12 col-md-4 col-lg-3 mb-5">
+                    <h3 class="text-EBG mb-4 fw-semibold mb-4">
+                        Tasty HUT
+                    </h3>
+                    <P class=" text-opacity-75">
+                        There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour.
+                    </P>
+                </div>
+                <div class="col-12 col-md-4 col-lg-2 mb-5">
+                    <h3 class="text-EBG mb-6 fw-semibold">
+                        Sections
+                    </h3>
+                    <ul class="list-unstyled">
+                        <li>
+                            <a href="#" class="text-opacity-75 text-decoration-none text-dark mb-2">Home</a>
+                        </li>
+                        <li>
+                            <a href="#" class="text-opacity-75 text-decoration-none text-dark mb-2">About Us</a>
+                        </li>
+                        <li>
+                            <a href="#" class="text-opacity-75 text-decoration-none text-dark mb-2">Cases</a>
+                        </li>
+                        <li>
+                            <a href="#" class="text-opacity-75 text-decoration-none text-dark mb-2">Blog</a>
+                        </li>
+                        <li>
+                            <a href="#" class="text-opacity-75 text-decoration-none text-dark mb-2">Contact Us</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-12 col-md-3 col-lg-3 mb-5">
+                    <h3 class="text-EBG mb-4 fw-semibold mb-4">
+                        Contact Now
+                    </h3>
+                    <P class=" text-opacity-75 mb-3">
+                        555 4th 5t NW, Washington DC 20530, United States
+                    </P>
+                    <p class=" text-opacity-75 mb-3">
+                        +88 01750 000 000 <br>
+                        +88 01750 000 000
+                    </p>
+                    <p class=" text-opacity-75">
+                        info@gmail.com <br>
+                        info@gmail.com
+                    </p>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4 mb-5">
+                    <h3 class="text-EBG mb-4 fw-semibold mb-4">
+                        Subscribe
+                    </h3>
+                    <P class=" text-opacity-75 mb-3">
+                        Subscribe for our latest & Articles. We Won’t Give You Spam Mails
+                    </P>
+                    <form action="#" class="d-flex w-100 bg-light rounded">
+                        <label for="email" class="w-100">
+                            <input type="email" name="email" id="email" placeholder="Email Address" class="form-control border-0 p-3 bg-transparent">
+                        </label>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- end -->
+
+
+
+    <!-- bootstrap js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- custom js -->
+    <script src="./js/index.js"></script>
+</body>
+</html>
